@@ -29,21 +29,39 @@ Oraxia takes your input word and computes an HMAC-SHA256 hash using your secret 
    go build -o oraxia main.go
    ```
 
-3. Set up your secret token (see Security section below)
+3. (Optional) Install globally for command-line access:
+
+   ```bash
+   # Option 1: Move to system bin (requires sudo)
+   sudo mv oraxia /usr/local/bin/
+
+   # Option 2: Add to user bin (create ~/bin if it doesn't exist)
+   mkdir -p ~/bin
+   mv oraxia ~/bin/
+   # Add ~/bin to PATH in your ~/.bashrc or ~/.zshrc: export PATH="$HOME/bin:$PATH"
+   ```
+
+4. Set up your secret token (see Security section below)
 
 ## Usage
 
+After building and optionally installing the binary, use it from the command line:
+
 ```bash
+# If not installed globally, run from the project directory
 ./oraxia <word>
+
+# If installed globally (see Installation step 3), use anywhere
+oraxia <word>
 ```
 
 ### Examples
 
 ```bash
-$ ./oraxia github
+$ oraxia github
 wzfJ26DDJZPlbMi6gzbJQA==
 
-$ ./oraxia github
+$ oraxia github
 wzfJ26DDJZPlbMi6gzbJQA==
 ```
 
@@ -79,9 +97,6 @@ go run -c 'package main; import ("crypto/rand"; "encoding/base64"; "fmt"); func 
 
 - Go 1.16 or later
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
