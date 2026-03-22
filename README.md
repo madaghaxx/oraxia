@@ -1,6 +1,6 @@
 # Oraxia - Deterministic Password Generator
 
-Oraxia is a command-line password generator written in Go that creates secure, deterministic passwords based on a single input word. Inspired by Warframe's mysterious and powerful themes, Oraxia ensures that the same input word always generates the same password, making it perfect for creating memorable yet strong passwords.
+Oraxia is a command-line password generator written in Go that creates secure, deterministic passwords based on a single input word. Oraxia ensures that the same input word always generates the same password, making it perfect for creating memorable yet strong passwords.
 
 ## Features
 
