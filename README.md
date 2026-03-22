@@ -67,6 +67,31 @@ wzfJ26DDJZPlbMi6gzbJQA==
 
 Notice that the same word always gives the same output.
 
+## Windows Usage
+
+Oraxia works well on Windows too:
+
+1. Build the binary as `oraxia.exe` with:
+   ```sh
+   go build -o oraxia.exe main.go
+   ```
+   Or download a prebuilt `.exe` if available.
+
+2. Place your `secret.txt` file in the same directory as `oraxia.exe`.
+
+3. Open Command Prompt (`cmd`), navigate to the directory with `oraxia.exe`, and run:
+   ```sh
+   oraxia.exe <word>
+   ```
+   For example:
+   ```sh
+   oraxia.exe github
+   ```
+
+You’ll get the same secure, deterministic password for each word, just like on Linux/macOS.
+
+> **Tip:** You can also add the directory where `oraxia.exe` lives to your system PATH for easier access from anywhere.
+
 ## Security
 
 Oraxia generates 22-character passwords with 128-bit entropy using HMAC-SHA256. The security relies entirely on keeping your `secret.txt` file private. Never commit it to version control or share it.
