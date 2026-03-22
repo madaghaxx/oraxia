@@ -35,7 +35,7 @@ Oraxia takes your input word and computes an HMAC-SHA256 hash using your secret 
    # Option 1: Move to system bin (requires sudo)
    sudo mv oraxia /usr/local/bin/
 
-   # Option 2: Add to user bin (create ~/bin if it doesn't exist)
+   # Option 2 (no sudo): Add to user bin (create ~/bin if it doesn't exist)
    mkdir -p ~/bin
    mv oraxia ~/bin/
    # Add ~/bin to PATH in your ~/.bashrc or ~/.zshrc: export PATH="$HOME/bin:$PATH"
@@ -69,7 +69,7 @@ Notice that the same word always gives the same output.
 
 ## Security
 
-Oraxia generates 22-character passwords with 128-bit entropy using HMAC-SHA256. The security relies entirely on keeping your `secret.txt` file private. Never commit it to version control.
+Oraxia generates 22-character passwords with 128-bit entropy using HMAC-SHA256. The security relies entirely on keeping your `secret.txt` file private. Never commit it to version control or share it.
 
 ### Generating a Secure Secret
 

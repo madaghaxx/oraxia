@@ -12,14 +12,15 @@ import (
 func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("Usage: oraxia <word>")
-		fmt.Println("Generates a deterministic secure password based on the provided word.")
+		fmt.Println("Generates a secure password based on the provided word.")
+		fmt.Println("All you need is to create  \"secret.txt\"")
 		os.Exit(1)
 	}
 
 	secret, err := os.ReadFile("secret.txt")
 	if err != nil {
 		fmt.Println("Error reading secret.txt:", err)
-		fmt.Println("Please ensure secret.txt exists with your secret token.")
+		fmt.Println("Please ensure secret.txt exists in you current directory.")
 		os.Exit(1)
 	}
 
